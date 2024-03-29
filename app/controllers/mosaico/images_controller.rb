@@ -105,7 +105,7 @@ module Mosaico
 
     def send_image(image)
       image_url = image.class.backend.url_to(image.file)
-      redirect_to image_url
+      redirect_to image_url, allow_other_host: true
     end
 
     def find_or_create_placeholder(width, height)
